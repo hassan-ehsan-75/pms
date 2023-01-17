@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wiki - Nasable Inside</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+  
+           
+				<div class="head_wrapper">
+				
+					  
+					 <center> <img src="img/nasable_logo.png"/>	<small id="#wiki"> wiki</small></center>
+					
+					<hr>
+					<h4>Contents</h4>
+				<ul class="titles">
+          
+                <li>
+                    <a href="#generate_token">API tokens</a>
+                </li>
+				<li>
+                    <a href="#news_api">News API</a>
+                </li>
+				<li>
+                    <a href="#project_api">Project API</a>
+                </li>
+				 <li>
+                    <a href="#jobs_api">Jobs API</a>
+                </li>
+				 <li>
+                    <a href="#users_api">User API</a>
+                </li>
+            </ul>
+				</div>
+                <hr>
+				<h3 id="generate_token">API tokens</h3>
+				An <i>API token</i> provides an easy way to authnticate to the the nasable inside system for fetching public data.
+				To generate the API token you need to provide a <code>secret key/password</code> and the <code>framework name</code> in which the API will be used by.
+				<p></p>
+				 <hr>
+				
+				<!---News API--->
+				<section id="news_api">
+				<h3>News API</h3>
+                <p>
+				The <i>News API</i> allows to get all the latest <i>"PUBLISHED"</i> aricles in the nasable inside system.
+				To fetch the latest news you need first to <a href="#generate_token">generate a token</a> to be able to call the api from a specific framework.
+				To start you need to call the link <code>https://website_url.com/api/getNews</code> and send two parameters	<code>token</code> and <code>count</code>.
+				</p>
+				<h5>Call paramters</h5>
+				<table class="table">
+				  <thead><tr> <th>Parameter</th><th>Discription</th></tr>  </thead>
+				<tr> <td>token</td><td>The generated api token for your framework</td></tr>
+				<tr> <td>count</td><td>A limit on the articles to be returned</td></tr>
+				</table>
+				<h5>Return paramters</h5>
+				<table class="table">
+				  <thead><tr> <th>Parameter</th><th>Discription</th></tr>  </thead>
+				<tr> <td>title</td><td>Article's title</td></tr>
+				<tr> <td>content</td><td>Article's content including HTML tags</td></tr>
+				<tr> <td>summary</td><td>Article's summary (the first 200 chracters of the contetnt) with HTML tags striped</td></tr>
+				<tr> <td>created_at</td><td>The timestamp when the aricle was first created</td></tr>
+				<tr> <td>updated_at</td><td>The last time the article was updated</td></tr>
+				<tr> <td>attachment</td><td>image name and extention that resides in the <code>cdn directory</code></td></tr>
+				</table>
+				</section>
+				<hr>
+				
+				<section id="project_api">
+				<h3>Project API</h3>
+                <p>
+				The <i>Project API</i> allows to get all the latest <i>"PUBLISHED"</i> projects in the nasable inside system.
+				To start you need to call the link <code>https://website_url.com/api/getProjects</code> and send two parameters	<code>token</code> and <code>count</code>.
+				</p>
+				<h5>Call paramters</h5>
+				<table class="table">
+				  <thead><tr> <th>Parameter</th><th>Discription</th></tr>  </thead>
+				<tr> <td>token</td><td>The generated api token for your framework</td></tr>
+				<tr> <td>count</td><td>A limit on the articles to be returned</td></tr>
+				</table>
+				<h5>Return paramters</h5>
+				<table class="table">
+				  <thead><tr> <th>Parameter</th><th>Discription</th></tr>  </thead>
+				<tr> <td>title</td><td>Project's title</td></tr>
+				<tr> <td>content</td><td>Project's content including HTML tags</td></tr>
+				<tr> <td>summary</td><td>Project's summary (the first 200 chracters of the contetnt) with HTML tags striped</td></tr>
+				<tr> <td>created_at</td><td>The timestamp when the project was first created</td></tr>
+				<tr> <td>attachment</td><td>image name and extention that resides in the <code>cdn directory</code></td></tr>
+				</table>
+				</section>
+				
+				<hr>
+				
+				<section id="jobs_api">
+				<h3>Jobs API</h3>
+                <p>
+				The <i>Jobs API</i> allows to get all the latest <i>"PUBLISHED"</i>jobs in the nasable inside system.
+				To start you need to call the link <code>https://website_url.com/api/getJobs</code> and send one parameter	<code>token</code>.
+				</p>
+				<h5>Call paramters</h5>
+				<table class="table">
+				  <thead><tr> <th>Parameter</th><th>Discription</th></tr>  </thead>
+				<tr> <td>token</td><td>The generated api token for your framework</td></tr>
+				</table>
+				<h5>Return paramters</h5>
+				<table class="table">
+				  <thead><tr> <th>Parameter</th><th>Discription</th></tr>  </thead>
+				<tr> <td>title</td><td>Job's title</td></tr>
+				<tr> <td>content</td><td>Job's content including HTML tags</td></tr>
+				<tr> <td>summary</td><td>Job's summary (the first 200 chracters of the contetnt) with HTML tags striped</td></tr>
+				<tr> <td>created_at</td><td>The timestamp when the job was first created</td></tr>
+				<tr> <td>updated_at</td><td>The timestamp when the job was last updated</td></tr>
+				<tr> <td>attachment</td><td>image name and extention that resides in the <code>cdn directory</code></td></tr>
+				</table>
+				</section>
+				
+				<hr>
+				
+				<section id="users_api">
+				<h3>Users API</h3>
+                <p>
+				The <i>Users API</i> allows to get all users in the nasable inside system.
+				To start you need to call the link <code>https://website_url.com/api/getUsers</code> and send one parameter <code>token</code>.
+				</p>
+				<h5>Call paramters</h5>
+				<table class="table">
+				  <thead><tr> <th>Parameter</th><th>Discription</th></tr>  </thead>
+				<tr> <td>token</td><td>The generated api token for your framework</td></tr>
+				</table>
+				<h5>Return paramters</h5>
+				<table class="table">
+				  <thead><tr> <th>Parameter</th><th>Discription</th></tr>  </thead>
+				<tr> <td>full_name</td><td>User's full name</td></tr>
+				<tr> <td>title</td><td>User's title in the company</td></tr>
+				<tr> <td>email</td><td>User's email address</td></tr>
+				<tr> <td>twitter</td><td>Twitter id</td></tr>
+				<tr> <td>linkedin</td><td>LinkedIn id</td></tr>
+				<tr> <td>about</td><td>Long text about the user</td></tr>
+				<tr> <td>attachment</td><td>User's photo: name and extention that resides in the <code>cdn directory</code></td></tr>
+				</table>
+				</section>
+				
+	
+       
+
+    </div>
+    <!-- /#container-->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body{
+	background:#666666;
+}
+.container{
+	margin-top:30px;
+	margin-bottom:30px;
+	background:#fff;
+	padding:30px;
+	border-radius: 8px;
+}
+.head_wrapper {
+	
+	padding:30px;
+	background:#1a2226;
+	color:#fff;
+	border: 5px solid;
+	border-radius: 8px;
+	border-color: #a5a5a5;
+}
+
+.head_wrapper ul > li > a {
+	color:#a5a5a5;
+	
+}
